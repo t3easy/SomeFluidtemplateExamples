@@ -1,0 +1,35 @@
+body{font-family:Arial,Helvetica,sans-serif; font-size:12px; color:#4E4E4E}
+
+h1{font-family:Times}
+a{text-decoration:none}
+
+#frame{width:1100px; margin-left:auto; margin-right:auto}
+#header{height:100px; margin-bottom:15px}
+.logo{float:left}
+.search{float:right; padding-top:25px}
+
+#nav{width:190px; height:529px; padding:50px 5px 25px 25px; margin-right:35px; float:left; background-image:url("../Images/lr.gif"); background-repeat:no-repeat}
+
+#nav h3{color:#515151; font-size:16px}
+#nav .border{border-left:1px solid #87CA53}
+#nav ul{list-style:none; padding-left:10px; margin-left:1px; border-left:1px solid #87CA53}
+#nav ul li{padding:2px 0}
+#nav ul a{color:#515151; font-size:14px; text-decoration:none}
+#nav ul a:hover, #nav ul a.act{color:#87CA53}
+#nav .logos{margin-top:125px; margin-left:-10px}
+#contentFrame{float:left; margin-bottom:20px; width:100%}
+
+#main{float:left; height:300px; width:845px}
+.twoColumns #main{width:715px; margin-right:15px}
+.twoColumns #border{width:95px; float:left; height:597px; padding-left:10px; padding-right:10px; background-image:url("../Images/rr.gif"); background-repeat:no-repeat}
+
+#breadcrumb{border-bottom:1px solid #BABABA; font-family:Times; margin-bottom:20px}
+#breadcrumb p{margin:0}
+#breadcrumb{color:#8C8C8C; font-size:12px}
+#breadcrumb a{color:#8C8C8C}
+#breadcrumb a.act{color:#87CA53}
+
+#footer{height:30px; width:100%; clear:both}
+
+#footer p{width:100%; line-height:30px; vertical-align:middle; text-align:center}
+

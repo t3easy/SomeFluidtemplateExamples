@@ -1,0 +1,87 @@
+breadcrumb = HMENU
+breadcrumb {
+  special = rootline
+  1 = TMENU
+  1 {
+     NO = 1
+     NO.stdWrap2.wrap = |&nbsp;&nbsp;&gt;&nbsp;&nbsp;
+     ACT = 1
+     ACT < .NO
+     CUR = 1
+     CUR.ATagParams = class="act"
+  }
+}
+
+menue = COA
+menue {
+  
+ wrap = <ul>|</ul>
+ 
+ 10 = TEXT
+ 10.value = Home
+ 10.stdWrap.typolink.parameter = 1
+ 10.wrap = <li>|</li>
+ 
+ 20 = HMENU
+ 20 {
+  
+  1 = TMENU
+  1 {
+    NO = 1
+    NO.stdWrap2.wrap = <li>|</li>
+    CUR = 1
+    CUR < .NO
+    CUR.ATagParams = class="act"
+    ACT = 1
+    ACT < .CUR
+  }
+  
+  2 = TMENU
+  2 < .1
+  2 {
+     NO.stdWrap2.wrap = <li>&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+     ACT < .NO
+     ACT.ATagParams = class="act"
+     CUR < .ACT
+    }
+  }
+  
+}
+
+
+logo = IMAGE
+logo.file = fileadmin/Template_Fluid/Public/Images/logo.png
+logo.stdWrap.typolink.parameter = 1
+
+footer = TEXT
+footer {
+  data = date:U
+  strftime = &copy; TYPO3 SomeFluidtemplateExamples %Y
+  wrap = <p>|</p>
+}
+
+contentframenormal < styles.content.get
+
+FluidTemplate = FLUIDTEMPLATE
+FluidTemplate {
+  file = fileadmin/Template_Fluid/Private/single-column.html
+  layoutRootPath = fileadmin/Template_Fluid/Private/Layouts/
+  partialRootPath = fileadmin/Template_Fluid/Private/Partials/  
+  variables {
+    footer < footer
+    logo < logo
+    menue < menue
+    breadcrumb < breadcrumb
+  }
+}
+
+page = PAGE
+page {
+  config {
+    doctype = html5
+  }
+  typeNum = 0
+  includeCSS.main = fileadmin/Template_Fluid/Public/Stylesheet/main.css
+  
+  10 < FluidTemplate
+}

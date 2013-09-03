@@ -1,0 +1,36 @@
+<div id="frame">
+	<header>
+        <div id="header">
+            <div class="logo">
+                <f:format.raw>{logo}</f:format.raw>
+            </div>
+            <div class="search">
+                <form>
+                    <input type="text" name="sword" />
+                    <input type="submit" name="submit" value="Suchen"/>
+                </form>
+            </div>
+        </div>
+	</header>
+    <section>
+        <div id="contentFrame">
+            <div id="nav">
+                <h3>Inhalte</h3>
+                <div class="border">
+                    <f:format.raw>{menue}</f:format.raw>
+                </div>
+                <div class="logos">
+                    <f:image src="fileadmin/Template_Fluid/Public/Images/logos.gif" alt="Unsere Logos" />
+                </div>
+            </div>
+            
+            <f:render section="inhalte" />
+    
+        </div>
+	</section>
+	<footer>
+        <div id="footer">
+            <f:format.raw>{footer}</f:format.raw>
+        </div>
+	</footer>
+</div>
