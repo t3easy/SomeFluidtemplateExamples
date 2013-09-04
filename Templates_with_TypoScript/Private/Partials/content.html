@@ -1,1 +1,7 @@
-<f:cObject typoscriptObjectPath="contentframenormal" />
+<f:comment>
+	The cObject ViewHelper outputs TypoScript content Objects.
+	The output is already raw and don't need a additional format ViewHelper.
+	See http://docs.typo3.org/typo3cms/TyposcriptReference/ContentObjects/Index.html
+	Objects that are stored inside "temp." don't work because they are unset after template parsing.
+</f:comment>
+<f:cObject typoscriptObjectPath="lib.content.main" />

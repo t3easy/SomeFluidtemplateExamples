@@ -60,7 +60,21 @@ footer {
   wrap = <p>|</p>
 }
 
-contentframenormal < styles.content.get
+lib.content.0 < styles.content.get
+lib.content.main < lib.content.0
+
+lib.content.1 < styles.content.get
+lib.content.1.select.where = colPos = 1
+lib.content.left < lib.content.1
+
+lib.content.2 < styles.content.get
+lib.content.2.select.where = colPos = 2
+lib.content.right < lib.content.2
+
+lib.content.3 < styles.content.get
+lib.content.3.select.where = colPos = 3
+lib.content.border < lib.content.3
+
 
 FluidTemplate = FLUIDTEMPLATE
 FluidTemplate {
